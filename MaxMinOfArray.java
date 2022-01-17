@@ -104,7 +104,7 @@ public class MaxMinOfArray{
 				if(arr[i+1] < ans.min)
 					ans.min = arr[i+1];
 			}
-			i++;
+			i+=2;
 		}
 		return ans ;
 	}
