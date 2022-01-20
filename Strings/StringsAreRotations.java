@@ -38,5 +38,15 @@ class StringsAreRotations{
 				return true;
 		}
 		return false;
+		
+		//Method 3 by rotating the array
+		// if(str1.length() != str2.length())
+		// 	return false;
+		// for(int i=0 ; i<str1.length() ; i++){
+		// 	String s = str1.substring(i+1, str1.length()) + str1.substring(0, i+1);
+		// 	if(s.compareTo(str2) == 0)
+		// 		return true;
+		// }
+		// return false;
 	}
 }
