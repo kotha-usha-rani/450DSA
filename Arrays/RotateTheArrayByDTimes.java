@@ -10,12 +10,8 @@ public class RotateTheArrayByDTimes{
 		// rotateUsingTempArray(arr, d);
 		// System.out.println(Arrays.toString(arr));
 
-		// rotateByDTimes(arr, d, arr.length);
-		// System.out.println(Arrays.toString(arr));
-
-		rotateUsingJugglingAlgo(arr, d);
+		rotateByDTimes(arr, d, arr.length);
 		System.out.println(Arrays.toString(arr));
-
 
 	}
 	// Method 1 Using Reversal algorithm
@@ -75,18 +71,5 @@ public class RotateTheArrayByDTimes{
 			return n;
 		return find_gcd(d, n%d);
 	}
-	public static void rotateUsingJugglingAlgo(int[] arr, int d){
-		int gcd = find_gcd(arr.length, d);
-		int j=0;
-		int temp = 0;
-		for(int i=0 ; i<gcd ; i++){
-			j=i;
-			temp = arr[j];
-			while(j<arr.length-gcd){
-				arr[j] = arr[j+gcd];
-				j=j+gcd;
-			}
-			arr[j] = temp;
-		}
-	}
+	
 }
