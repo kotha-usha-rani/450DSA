@@ -3,15 +3,12 @@ class MoveLastElementToFrontInList{
 		if(head == null || head.next == null)
 			return head;
 		Node temp = head;
-		Node last = null;
 		while(temp.next.next != null){
 			temp = temp.next ;
 		}
-		last = temp.next;
-		temp.next = head;
-		last.next = head.next ;
-		head.next = null;
-		head = last;
+		temp.next.next = head;
+		head = temp.next;
+		temp.next = null;
 		return head;
 	}
 }
