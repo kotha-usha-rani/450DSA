@@ -65,6 +65,8 @@ class CelebrityProblem
     	//brute force
     	int count;
     	for(int i=0 ; i<n ; i++){
+            if(i!= 0 && M[0][i] == 0)
+    	        continue;
     	    count = 0;
     	    for(int j=0 ; j<n ; j++){
     	        if(i==j)
