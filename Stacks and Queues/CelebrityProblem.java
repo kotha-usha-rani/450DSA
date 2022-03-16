@@ -58,6 +58,33 @@ class CelebrityProblem
         }
         return cele;
     }
+    
+    //skipping columns
+    int celebrity(int M[][], int n)
+    {
+    	//brute force
+    	int count;
+    	for(int i=0 ; i<n ; i++){
+    	    count = 0;
+    	    for(int j=0 ; j<n ; j++){
+    	        if(i==j)
+    	            continue;
+    	        if(M[j][i] != 1)
+    	            break;
+    	        else{
+    	            if(M[i][j] == 1){
+    	                if(j==i+1)
+    	                    i+=1;
+    	                break;
+    	            }
+    	            else
+    	                count++;
+    	        }
+    	    }
+    	    if(count == n-1)
+    	        return i;
+    	}
+    	return -1;
 }
 
 
